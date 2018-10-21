@@ -2,7 +2,7 @@
 
 > A tool for build commit messages with the correct format.
 
-This project is hosted on code sandbox: 
+This project is hosted on code sandbox: https://codesandbox.io/s/github/ionutvmi/commit-message-builder
 
 ## Build Setup
 
