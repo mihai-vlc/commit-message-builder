@@ -66,11 +66,14 @@ export default {
 
   mounted() {
     this.storedData = this.getStoredData();
+    var hasStoredItems = this.storedData.length > 0;
     this.currentStateIndex =
-      this.storedData.length > 0 ? this.storedData.length - 1 : 0;
+      hasStoredItems ? this.storedData.length - 1 : 0;
     this.$root.$on("pushCurrentState", this.pushCurrentState.bind(this));
 
-    this.setActiveState(this.currentStateIndex);
+    if (hasStoredItems) {
+      this.setActiveState(this.currentStateIndex);
+    }
   },
 
   methods: {
